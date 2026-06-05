@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
         header {
             background: #ffffff;
             border-bottom: 1px solid #e2e8f0;
-            padding: 1.5rem 0;
+            padding: 1.25rem 0;
             position: fixed;
             width: 100%;
             top: 0;
@@ -38,16 +38,25 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             font-size: 1.5rem;
             font-weight: 700;
             color: #1a202c;
             letter-spacing: -0.5px;
         }
 
+        .logo img {
+            width: 74px;
+            height: auto;
+            display: block;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 1.75rem;
         }
 
         nav a {
@@ -63,31 +72,43 @@
 
         .hero {
             background: #ffffff;
-            padding: 180px 2rem 120px;
+            padding: 170px 2rem 90px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.6rem;
             margin-bottom: 1.5rem;
             color: #1a202c;
             font-weight: 700;
             letter-spacing: -1px;
+            line-height: 1.1;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.75rem;
             color: #4a5568;
-            max-width: 700px;
+            max-width: 760px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .hero .subtitle {
-            font-size: 1.1rem;
-            color: #718096;
-            margin-bottom: 2.5rem;
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin-bottom: 1.25rem;
+            max-width: 820px;
+            font-weight: 500;
+        }
+
+        .cta-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
         }
 
         .cta-button {
@@ -104,29 +125,78 @@
             transition: all 0.3s;
         }
 
+        .cta-button.secondary {
+            background: #ffffff;
+            color: #1a202c;
+            border: 1px solid #cbd5e0;
+        }
+
         .cta-button:hover {
             background: #2d3748;
             transform: translateY(-2px);
+        }
+
+        .cta-button.secondary:hover {
+            background: #f7fafc;
         }
 
         section {
             max-width: 1200px;
             margin: 0 auto;
             padding: 100px 2rem;
+            scroll-margin-top: 120px;
         }
 
         h2 {
             font-size: 2.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 1rem;
             text-align: center;
             color: #1a202c;
             font-weight: 700;
         }
 
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            padding-top: 0;
+        }
+
+        .metric-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            background: #ffffff;
+            text-align: left;
+        }
+
+        .metric-card strong {
+            display: block;
+            color: #1a202c;
+            font-size: 2.3rem;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .metric-card span {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .service-card {
@@ -163,14 +233,66 @@
             line-height: 1.7;
         }
 
+        .impact-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .impact-item {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 2rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .impact-item:last-child {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .impact-item strong {
+            color: #1a202c;
+            font-size: 1rem;
+        }
+
+        .impact-item p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .checklist-callout {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 3rem;
+            background: #f7fafc;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .checklist-callout h2 {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .checklist-callout p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
         .about {
             background: #f7fafc;
         }
 
         .about-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
         }
 
         .about-content p {
@@ -180,10 +302,18 @@
             margin-bottom: 1.5rem;
         }
 
+        .profile-photo {
+            float: left;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 1.5rem 1rem 0;
+        }
+
         .credentials {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 1rem;
             margin-top: 2rem;
         }
@@ -297,11 +427,29 @@
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
 
             nav ul {
-                gap: 1.5rem;
+                gap: 0.9rem;
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            nav {
+                padding: 0 1rem;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+                gap: 0.75rem;
+            }
+
+            .logo img {
+                width: 56px;
             }
 
             h2 {
@@ -311,15 +459,73 @@
             section {
                 padding: 60px 1.5rem;
             }
+
+            .hero {
+                padding: 150px 1.5rem 70px;
+            }
+
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .checklist-callout {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .about-content {
+                text-align: center;
+            }
+
+            .profile-photo {
+                float: none;
+                display: block;
+                margin: 0 auto 1.5rem;
+            }
+
+            .credentials {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 560px) {
+            header {
+                position: static;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .hero {
+                padding-top: 70px;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><img src="./images/WallArchIcon.png">WallArch Consulting</div>
+            <div class="logo"><img src="./images/WallArchIcon.png" alt="WallArch logo">WallArch Consulting</div>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#checklist">Checklist</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -327,23 +533,97 @@
     </header>
 
     <section id="home" class="hero">
-        <h1> Principal Architect </h1>
-        <p class="subtitle">20+ years of Designing and Delivering Large-Scale Digital Transformation, specialising in AI governance, multi-cloud platform delivery, and engineering standards at regulated enterprise scale.</p>
-              <p>  A practical, ordered checklist for solution builders (architects, delivery teams) to track progress from
-        <b>investment intent</b> through <b>design</b>, <b>build</b>, and a <b>pre-prod go/no-go</b>.
-        Includes coverage for: capabilities, ADRs, operations, cloud sovereignty, GDPR, DORA/NIS2, and EU AI Act (where applicable).</p>
-        <a href="./checklist/checklist.html" class="cta-button">View Checklistt</a>
+        <h1>Principal Architect for Regulated Enterprise Platforms</h1>
+        <p class="subtitle">I help organizations design, govern, and modernize enterprise-scale cloud, AI, and platform engineering capabilities.</p>
+        <p>20+ years delivering distributed systems, multi-cloud architecture, responsible AI practices, engineering standards, and real-time delivery visibility across healthcare, insurance, and regulated enterprise environments.</p>
+        <div class="cta-row">
+            <a href="#contact" class="cta-button">Discuss an Engagement</a>
+            <a href="#checklist" class="cta-button secondary">View Readiness Checklist</a>
+        </div>
     </section>
 
+    <section id="proof" class="metrics">
+        <div class="metric-card">
+            <strong>170M+</strong>
+            <span>Members supported through enterprise healthcare and insurance platforms.</span>
+        </div>
+        <div class="metric-card">
+            <strong>300+</strong>
+            <span>Multi-cloud solutions assessed across Azure, AWS, and GCP.</span>
+        </div>
+        <div class="metric-card">
+            <strong>20,000</strong>
+            <span>Developers supported through engineering visibility and standards adoption.</span>
+        </div>
+        <div class="metric-card">
+            <strong>$150M</strong>
+            <span>Multi-year investment architecture for identity data remediation.</span>
+        </div>
+    </section>
 
+    <section id="services">
+        <h2>How I Help</h2>
+        <p class="section-intro">Practical architecture support for organizations that need delivery momentum, governance discipline, and credible technical direction at enterprise scale.</p>
+        <div class="services">
+            <div class="service-card">
+                <h3>Enterprise Architecture & Delivery Assurance</h3>
+                <p>Architecture direction, design governance, ADR discipline, stage-gate readiness, and delivery traceability for regulated programs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cloud & Platform Modernization</h3>
+                <p>Multi-cloud standards, platform engineering, OpenShift and VMware modernization, CI/CD, infrastructure-as-code, and technical debt reduction.</p>
+            </div>
+            <div class="service-card">
+                <h3>Responsible AI & Agentic Governance</h3>
+                <p>AI solution intent, governance patterns, model documentation, runtime controls, and practical readiness for emerging AI regulation.</p>
+            </div>
+            <div class="service-card">
+                <h3>Engineering Visibility & Operating Metrics</h3>
+                <p>Application-to-source mapping, engineering telemetry, SDLC maturity, portfolio visibility, and executive decision dashboards.</p>
+            </div>
+        </div>
+    </section>
 
-    
+    <section id="impact">
+        <h2>Enterprise Impact</h2>
+        <p class="section-intro">A track record shaped by regulated delivery, architecture leadership, hands-on engineering depth, and measurable operating improvements.</p>
+        <div class="impact-list">
+            <div class="impact-item">
+                <strong>Identity data risk</strong>
+                <p>Designed a remediation solution for a $150M multi-year investment supporting common enrollment and member eligibility for more than 170M group members.</p>
+            </div>
+            <div class="impact-item">
+                <strong>Cloud standards</strong>
+                <p>Assessed 300+ individual solutions across Azure, AWS, and GCP, increasing public cloud ecosystem visibility to full enterprise coverage.</p>
+            </div>
+            <div class="impact-item">
+                <strong>Engineering telemetry</strong>
+                <p>Designed application-to-source-code mapping adopted as a global engineering OKR, reducing breach remediation visibility from weeks to days.</p>
+            </div>
+            <div class="impact-item">
+                <strong>AI delivery</strong>
+                <p>Led innovation architecture across LLM, RAG, intelligent document processing, post-call automation, and emerging agentic governance patterns.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="checklist">
+        <div class="checklist-callout">
+            <div>
+                <h2>Production Readiness Checklist</h2>
+                <p>A practical architecture checklist for solution builders moving from investment intent through design, build, and pre-production go/no-go. It covers capability alignment, ADRs, operations, cloud sovereignty, GDPR, DORA/NIS2, and EU AI Act readiness where applicable.</p>
+            </div>
+            <a href="./checklist/checklist.html" class="cta-button">Open Checklist</a>
+        </div>
+    </section>
 
     <section id="about" class="about">
         <h2>About William Wallace</h2>
         <div class="about-content">
-            <img src="./images/me.jpg" width="150" height="150" align="left">
-            <p>Experienced technologist specializing in enterprise grade systems and multi-cloud architecture. Total experience of 20+ years designing and delivering solutions across on-premise (VMWare, OpenShift) and multi-cloud (Azure, AWS and GCP) for Fortune 50 organizations including UnitedHealth Group and Elevance. Designed and delivered multi-cloud developer enablement platforms, event driven architectures at scale, AI inference platforms and have hands-on experience with GenAI, LLM and Agentic eco-systems. Experienced with enterprise technical debt management (EA), a champion of everything as code philosophy with the goal of connecting strategy to implementation via real-time metrics visualization for expedient decision making. Active member of the  global architecture communities of iasa global and chief architect groups (caf/can).   <div class="credentials">
+            <img src="./images/me.jpg" alt="William Wallace" class="profile-photo">
+            <p>William Wallace is a Principal Architect with 20+ years of experience designing and delivering enterprise-scale platforms across cloud-native, on-premise, and hybrid environments.</p>
+            <p>He has worked across VMware, OpenShift, Azure, AWS, and GCP for Fortune 50 healthcare and insurance organizations, supporting platforms that serve more than 170M members. His work focuses on responsible AI, platform modernization, technical governance, architecture traceability, and engineering visibility at regulated enterprise scale.</p>
+            <div class="credentials">
                 <span class="credential">IAPP AI GP</span>
                 <span class="credential">TOGAF 9.0</span>
                 <span class="credential">CSPO</span>
@@ -385,7 +665,7 @@
                 <span>•</span>
                 <span>Kilkenny, Ireland</span>
             </div>
-            <p>&copy; 2025 WallArch Consulting. All rights reserved.</p>
+            <p>&copy; 2026 WallArch Consulting. All rights reserved.</p>
         </div>
     </footer>
 
